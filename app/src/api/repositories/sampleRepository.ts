@@ -1,5 +1,7 @@
-import { Sample } from '@/api/types/modules/sample'
+import { Sample } from '@/api/types/models/sample'
 import ITransaction from '@/api/repositories/transaction'
+// import { Sample } from '../types/models/sample'
+// import ITransaction from './transaction'
 
 export default interface ISampleRepository {
   findAll(): Promise<Sample[]>
