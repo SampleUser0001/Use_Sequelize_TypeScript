@@ -1,4 +1,5 @@
 # !/bin/bash
 
-tsc sql.ts
-node sql.js
+npm install --save-dev webpack webpack-cli ts-loader tsconfig-paths-webpack-plugin
+npm install typescript sequelize tslint @types/node promise-mysql@4.1 @types/mysql@2.15
+npm run start

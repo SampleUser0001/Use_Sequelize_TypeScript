@@ -11,11 +11,7 @@ docker-compose up -d --build
 ## 実行
 
 ``` sh
-docker-compose exec node ash
-```
-
-``` sh
-sh build_and_run.sh
+docker-compose exec node ash build_and_run.sh
 ```
 
 ### 実行時にエラーになった場合

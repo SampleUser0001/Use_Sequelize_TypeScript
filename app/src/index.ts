@@ -1,4 +1,5 @@
 import * as mysql from 'promise-mysql';
+import ITransaction from '@/transaction'
 
 async function connection() {
   const connection = await mysql.createConnection({

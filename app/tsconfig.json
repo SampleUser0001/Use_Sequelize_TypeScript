@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+  "lib": ["es2018"],
+  "module": "commonjs",
+  "outDir": "dist",
+  "sourceMap": true,
+  "strict": true,
+  "target": "es2018",
+  "baseUrl": "./src",
+  "paths": {
+    "@/*": [ "./*" ],
+    },
+  },
+  "include": [
+    "src"
+  ],
+}
