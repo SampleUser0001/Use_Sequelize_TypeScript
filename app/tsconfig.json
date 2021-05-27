@@ -5,6 +5,7 @@
   "outDir": "dist",
   "sourceMap": true,
   "strict": true,
+  "experimentalDecorators": true,
   "target": "es2018",
   "baseUrl": "./src",
   "paths": {
@@ -13,5 +14,5 @@
   },
   "include": [
     "src"
-  ],
+  ]
 }

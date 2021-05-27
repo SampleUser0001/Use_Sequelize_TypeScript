@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "docker",
+    "password": "secret",
+    "database": "typescript", 
+    "host": "db",
+    "dialect": "mysql",
+    "define": {
+      "freezeTableName": true,
+      "underscored": true,
+      "timestamps": false
+    }, 
+    "logging": false,
+    "timezone": "+09:00"
+  }
+}
