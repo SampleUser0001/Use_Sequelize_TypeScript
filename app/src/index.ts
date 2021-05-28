@@ -25,16 +25,17 @@ import SequelizeTransaction from './api/repositories/impl/transactionImpl'
 //   console.log(rows);
 // });
 
-const sampleRepository = new SampleRepository()
-// insert
-const sampleModel = new SampleImpl('hoge')
-const transaction = new SequelizeTransaction()
-transaction.start()
-sampleRepository.create(sampleModel, transaction)
-transaction.commit()
+(async function main() {
+  const sampleRepository = new SampleRepository()
+  // insert
+  const sampleModel = new SampleImpl('hoge')
+  const transaction = new SequelizeTransaction()
+  await transaction.start()
+  await sampleRepository.create(sampleModel, transaction)
+  await transaction.commit()
 
-// 値の取得
-sampleRepository.findAll().then(function(result){
-  result.forEach(item => console.log(item))
-})
-
+  // 値の取得
+  sampleRepository.findAll().then(function(result){
+    result.forEach(item => console.log(item))
+  })
+})()
