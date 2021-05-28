@@ -1,6 +1,6 @@
-# TypeScript_MySQL_onDocker
+# Use sequelize TypeScript
 
-TypeScript + MySQL環境を作成する。
+TypeScript + sequelizeでDBのセッション管理を行う。
 
 ## init
 
