@@ -31,8 +31,13 @@ import SequelizeTransaction from './api/repositories/impl/transactionImpl'
   const sampleModel = new SampleImpl('hoge')
   const transaction = new SequelizeTransaction()
   await transaction.start()
-  await sampleRepository.create(sampleModel, transaction)
-  await transaction.commit()
+  try {
+    await sampleRepository.create(sampleModel, transaction)
+    await transaction.commit()
+  } catch(e){
+    await transaction.rollback()
+    throw Error
+  }
 
   // 値の取得
   sampleRepository.findAll().then(function(result){
